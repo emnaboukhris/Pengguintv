@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+// Import MUI stuff
+import { CssBaseline } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import SearchPage from './pages/SearchPage';
+import NavBar from './components/NavBar';
+import DetailPage from './pages/DetailPage';
+import { Route, Routes } from 'react-router-dom';
+import { BottomNavigation } from '@mui/material';
 
-function App() {
+// Define theme settings
+const dark = {
+  palette: {
+    mode: 'dark',
+  },
+};
+//Setting the Dark theme
+//Routing
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={createTheme(dark)}>
+      <CssBaseline />
+      <div className="App">
+        <NavBar />
+        <div className="content">
+          <Routes>
+            <Route exact path="/" element={<SearchPage />}></Route>
+            <Route path="/detail/:id" element={<DetailPage />}></Route>
+          </Routes>
+        </div>
+      </div>
+      <BottomNavigation />
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
