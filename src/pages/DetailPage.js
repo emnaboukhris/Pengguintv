@@ -67,7 +67,7 @@ export default function DetailPage() {
     width: 100%;
     height: 600px;
     overflow: hidden;
-    top: 10%;
+    top: 5%;
     text-align: left;
 
     z-index: 2;
