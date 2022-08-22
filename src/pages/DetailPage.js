@@ -16,7 +16,7 @@ export default function DetailPage() {
     { width: 600, itemsToShow: 3 },
 
     { width: 800, itemsToShow: 4 },
-    { width: 1200, itemsToShow: 5 },
+    { width: 1200, itemsToShow: 4 },
   ];
   // getting the id from the route
   const { id } = useParams();
@@ -37,7 +37,7 @@ export default function DetailPage() {
 
   const ShowContainer = styled.div`
     width: 100%;
-    height: 700px;
+    height: 600px;
     padding-top: 70px;
 
     color: white;
@@ -48,7 +48,7 @@ export default function DetailPage() {
   `;
   const ShowImag = styled.img`
     width: 100%;
-    height: 700px;
+    height: 600px;
     object-fit: cover;
     z-index: 1;
     position: relative;
@@ -56,7 +56,7 @@ export default function DetailPage() {
   const ShowShadow = styled.div`
     position: absolute;
     width: 100%;
-    height: 700px;
+    height: 600px;
     object-fit: cover;
     z-index: 2;
     background-image: linear-gradient(to right, black, transparent);
@@ -65,7 +65,7 @@ export default function DetailPage() {
     position: absolute;
     padding: 1rem;
     width: 100%;
-    height: 700px;
+    height: 600px;
     overflow: hidden;
     top: 10%;
     text-align: left;
