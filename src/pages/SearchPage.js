@@ -104,11 +104,11 @@ export default function SearchPage() {
                     navigate(`/detail/${show.id}`);
                   }}
                 >
-                  <StyledCard sx={{ maxWidth: 400 }}>
+                  <StyledCard sx={{ maxWidth: 300 }}>
                     <CardMedia
                       component="img"
-                      height="500"
-                      width="300"
+                     height="350"
+                      width="200"
                       image={getImages(show.poster_path)}
                       alt="green iguana"
                     />
